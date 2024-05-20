@@ -64,6 +64,7 @@ import org.jenkinsci.test.acceptance.slave.SlaveController;
 import org.jenkinsci.utils.process.CommandBuilder;
 import org.junit.Assume;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.jvnet.hudson.test.Issue;
@@ -226,6 +227,7 @@ public class WorkflowPluginTest extends AbstractJUnitTest {
     @WithDocker
     @WithPlugins({"workflow-cps@2.0", "workflow-job@2.0", "workflow-durable-task-step@2.0", "docker-workflow@1.5", "git", "ssh-agent@1.10", "ssh-slaves@1.11"})
     @WithCredentials(credentialType=WithCredentials.SSH_USERNAME_PRIVATE_KEY, values={"git", "/org/jenkinsci/test/acceptance/docker/fixtures/GitContainer/unsafe"}, id="gitcreds")
+    @Ignore("Does not work on Ubuntu 24.04+")
     @Issue("JENKINS-27152")
     @Test public void sshGitInsideDocker() throws Exception {
         GitContainer gitContainer = gitServer.get();

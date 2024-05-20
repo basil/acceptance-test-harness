@@ -27,9 +27,6 @@ updates:
     directory: "src/main/resources/org/jenkinsci/test/acceptance/docker/fixtures/GitContainer"
     schedule:
       interval: "weekly"
-    ignore:
-      - dependency-name: "ubuntu"
-        versions: [">=22.04"]
   - package-ecosystem: "docker"
     directory: "src/main/resources/org/jenkinsci/test/acceptance/docker/fixtures/JabberContainer"
     schedule:
@@ -48,9 +45,6 @@ updates:
     directory: "src/main/resources/org/jenkinsci/test/acceptance/docker/fixtures/JiraContainer"
     schedule:
       interval: "weekly"
-    ignore:
-      - dependency-name: "ubuntu"
-        versions: [">=22.04"]
   - package-ecosystem: "docker"
     directory: "src/main/resources/org/jenkinsci/test/acceptance/docker/fixtures/LdapContainer"
     schedule:
@@ -78,9 +72,6 @@ updates:
     directory: "src/main/resources/org/jenkinsci/test/acceptance/docker/fixtures/Tomcat10Container"
     schedule:
       interval: "weekly"
-    ignore:
-      - dependency-name: "ubuntu"
-        versions: [">=22.04"]
   - package-ecosystem: "docker"
     directory: "src/main/resources/org/jenkinsci/test/acceptance/docker/fixtures/GitLabContainer"
     schedule:
